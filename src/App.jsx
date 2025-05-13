@@ -15,20 +15,22 @@ function App() {
     <>
       <div className="container">
         <div className="row">
-          <div className="col-12">
-            <div className="card d-flex flex-row">
-              <div className="card-img">
-                <p>immagine</p>
-              </div>
-              <div className="card-body ">
-                <div className="name mb-3">Lorem</div>
-                <div className="data mb-3">lorem</div>
-                <div className="nation mb-3">lorem</div>
-                <div className="bio mb-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod, assumenda. At veritatis quo, voluptates a ea molestias asperiores beatae expedita impedit vero nihil commodi praesentium alias nobis est soluta accusamus?</div>
-                <div className="recognition">lorem</div>
+          {actress.map((act) => (
+            <div className="col-12">
+              <div className="card d-flex flex-row">
+                <div className="card-img">
+                  <img src={act.image} alt="" />
+                </div>
+                <div className="card-body ">
+                  <div className="name mb-3">{act.name}</div>
+                  <div className="data mb-3">{act.birth_year}</div>
+                  <div className="nation mb-3">{act.nationality}</div>
+                  <div className="bio mb-3">{act.biography}</div>
+                  <div className="awards">{act.awards}</div>
+                </div>
               </div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </>
