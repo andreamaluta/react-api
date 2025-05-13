@@ -6,7 +6,7 @@ function App() {
   const [actress, setActress] = useState([]);
 
   const fetchActress = () => {
-    axios.get("https://lanciweb.github.io/demo/api/actresses/").then((resp) => console.log(resp.data))
+    axios.get("https://lanciweb.github.io/demo/api/actresses/").then((resp) => setActress(resp.data.name))
   }
 
   useEffect(() => (fetchActress()), []);
