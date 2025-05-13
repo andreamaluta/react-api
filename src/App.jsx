@@ -9,6 +9,8 @@ function App() {
     axios.get("https://lanciweb.github.io/demo/api/actresses/").then((resp) => console.log(resp.data.name))
   }
 
+  useEffect(() => (fetchActress()), []);
+
   return (
     <>
       <h1>Hello world</h1>
